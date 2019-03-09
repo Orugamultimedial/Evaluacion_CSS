@@ -31,13 +31,11 @@ a:link{
 }
 
 #Imagen_derecha{
-  margin-top: 500;
-  position: relative; right: 0px;
+  float: right;
 }
 
 #Imagen_izquierda{
-  display: block;
-  margin-top: 500;
+  float: left;
 }
 
 #Imagenes{

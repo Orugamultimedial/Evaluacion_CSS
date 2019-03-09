@@ -1,18 +1,23 @@
 #Cabecera{
   background-color: #5b7989;
   border-radius:10px 10px 0px 0px;
-}
+  }
+
+
 
 #Nombre_marca{
   color:white;
+  font-size: 50px;
   font-family: monospace;
   text-shadow: 2px 2px 2px #02010a;
   text-align-last: center;
+  position: relative; top:20px;
 }
 
 #Menu{
   text-decoration: none;
-  position: absolute; right:10px; Top:50px;
+  text-align: right;
+  position: relative; right: 20px; top:20px;
 }
 
 a:link{
@@ -22,12 +27,12 @@ a:link{
 #Imagen_central{
   display:block;
   margin:auto;
+
 }
 
 #Imagen_derecha{
-  display:block;
   margin-top: 500;
-  margin-right: 100px;
+  position: relative; right: 0px;
 }
 
 #Imagen_izquierda{

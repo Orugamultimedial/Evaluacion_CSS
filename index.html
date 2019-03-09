@@ -2,23 +2,38 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scaleble=no">
     <link rel="stylesheet" href="css/styles.css">
     <title>Oruga Multimedial</title>
   </head>
   <body>
   <section id="Cabecera">
     <h1 id="Nombre_marca">Comenzando con la fotografía</h1>
-    <nav id="Menu">
-      <a href="index.html">INICIO</a> | <a href="html/Paisajes.html">PAISAJES</a> | <a href="html/Retratos.html">RETRATOS</a>
+    <nav id="Menu_nav">
+      <div>
+        <a href="index.html">INICIO</a> |
+      </div>
+      <div>
+        <a href="html/Paisajes.html">PAISAJES</a> |
+      </div>
+      <div>
+        <a href="html/Retratos.html">RETRATOS</a> |
+      </div>
     </nav>
   </section>
-  <section id="Imagenes">
+  <section class="Imagenes">
     <img id="Imagen_central"src="img/Imagen_central.jpg" alt="imagen central" width="50%">
   </section>
-  <div class="imagenes2">
-    <a href="/html/Paisajes.html"><img id="Imagen_izquierda"src="img/Paisaje.jpg" alt="imagen izquierda" width="300px" height="300px"></a>
-    <a href="/html/Retratos.html"><img id="Imagen_derecha"src="img/Retrato.jpg" alt="imagen derecha" width="300px" height="300px"></a>
-
+  <div class="Contenedor">
+    <div>
+      <a href="../html/Retratos.html">
+        <img src="img/Retrato.jpg" class="adaptativa-porcentaje-1" height="300px"></div>
+      </a>
+    <div>
+      <a href="../html/Paisajes.html">
+        <img src="img/Paisaje.jpg" class="adaptativa-porcentaje-2" height="300px"></div>
+      </a>
+    </div>
   </div>
 
   </body>

@@ -10,32 +10,53 @@
   font-size: 50px;
   font-family: monospace;
   text-shadow: 2px 2px 2px #02010a;
-  text-align-last: center;
-  position: relative; top:20px;
+  text-align: center;
 }
 
-#Menu{
+#Menu_nav{
+  display: flex;
+  justify-content:flex-end;
+  align-items: flex-end;
   text-decoration: none;
-  text-align: right;
-  position: relative; right: 20px; top:20px;
+  border: 2px solid;
+  margin: 20px;
+  background-color: white;
 }
 
 a:link{
   text-decoration: none;
 }
-
-#Imagen_central{
-  display:block;
-  margin:auto;
-}
-
-#Imagenes{
+.Imagenes{
   background-color: #82c3a6;
 }
 
-.Imagenes2{
-  background-color: #d5c75f;
-  display: flex;
-  flex-direction:column;
+#Imagen_central{
+  display:flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  justify-content: center;
+  margin:auto;
+}
+
+.Contenedor{
+border: 1px;
+background-color: #d5c75f;
+height: 300px;
+display: flex;
+display: -webkit-flex;
+display: -ms-flexbox;
+flex-direction: row;
+justify-content:center;
+margin: 100px;
+padding: 10px;
+}
+
+.adaptativa-porcentaje-1{
+  flex-grow: 1;
   border: 1px;
+}
+
+.adaptativa-porcentaje-2{
+   flex-grow: 1;
+   border: 1px;
 }

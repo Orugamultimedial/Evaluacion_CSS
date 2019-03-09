@@ -1,14 +1,12 @@
 #Cabecera{
+  font-family: "dancing script";
   background-color: #5b7989;
   border-radius:10px 10px 0px 0px;
   }
 
-
-
 #Nombre_marca{
   color:white;
   font-size: 50px;
-  font-family: monospace;
   text-shadow: 2px 2px 2px #02010a;
   text-align: center;
 }
@@ -59,4 +57,14 @@ padding: 10px;
 .adaptativa-porcentaje-2{
    flex-grow: 1;
    border: 1px;
+}
+
+.Pie_de_pagina{
+  font-family: "dancing script";
+  background-color: #C6d5c5;
+  border-radius:0px 0px 10px 10px;
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  flex-direction: column;
 }

@@ -27,17 +27,15 @@ a:link{
 #Imagen_central{
   display:block;
   margin:auto;
-
-}
-
-#Imagen_derecha{
-  float: right;
-}
-
-#Imagen_izquierda{
-  float: left;
 }
 
 #Imagenes{
   background-color: #82c3a6;
+}
+
+.Imagenes2{
+  background-color: #d5c75f;
+  display: flex;
+  flex-direction:column;
+  border: 1px;
 }

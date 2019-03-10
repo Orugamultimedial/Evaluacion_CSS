@@ -36,27 +36,28 @@ a:link{
   margin:auto;
 }
 
-.Contenedor{
-border: 1px;
-background-color: #d5c75f;
-height: 300px;
-display: flex;
-display: -webkit-flex;
-display: -ms-flexbox;
-flex-direction: row;
-justify-content:center;
-margin: 100px;
-padding: 10px;
+.Imagenes_secundarias{
+  width: 100%;
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  flex-direction:column;
+  background-color: #d5c75f;
+  border:1px;
+  padding: 10px;
+
 }
 
 .adaptativa-porcentaje-1{
-  flex-grow: 1;
-  border: 1px;
+  max-width: 90%;
+  min-width: 50%;
+  flex-basis: 100%;
 }
 
 .adaptativa-porcentaje-2{
-   flex-grow: 1;
-   border: 1px;
+  max-width: 90%;
+  min-width: 49%;
+  flex-basis: 100%;
 }
 
 .Pie_de_pagina{

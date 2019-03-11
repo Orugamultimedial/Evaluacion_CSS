@@ -70,12 +70,14 @@ a:link{
   max-width: 100%;
   min-width: 49%;
   flex-basis: 100%;
+  margin:auto;
 }
 
 .adaptativa-porcentaje-2{
   max-width: 100%;
   min-width: 49%;
   flex-basis: 100%;
+  margin: auto;
 }
 
 .Pie_de_pagina{
@@ -86,4 +88,42 @@ a:link{
   display: -webkit-flex;
   display: -ms-flexbox;
   flex-direction: column;
+}
+
+.Contenedor_galeria_paisaje{
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  width: 100%;
+  min-height: 500px;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #d5c75f;
+  border:10px;
+  }
+
+.Paisaje_galeria{
+  width: 30%;
+  height: 30%;
+  margin: 20px;
+}
+
+.Contenedor_galeria_retrato{
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  width: 100%;
+  min-height: 500px
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #d5c75f;
+  border:10px;
+  }
+
+.Retrato_galeria{
+  width: 30%;
+  height: 30%;
+  margin: 20px;
 }

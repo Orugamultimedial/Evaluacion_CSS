@@ -1,6 +1,31 @@
  body{
 background-color: #02010a;
 }
+
+*{
+  font-family: "dancing script";
+}
+
+*{
+  animation: Slidein_header 1s;
+}
+
+img{
+  box-shadow: 2px 2px 2px #02010a;
+}
+
+@-webkit-keyframes Slidein_header{
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
+}
+
 #Cabecera{
   width: 100%;
   display: inline-flex;
@@ -8,12 +33,25 @@ background-color: #02010a;
   display: -ms-inline-flexbox;
   flex-direction:row;
   justify-content: space-between;
-  font-family: "dancing script";
   background-color: #5b7989;
   border-radius:10px 10px 0px 0px;
   }
 
+@media only screen and (max-width: 900px) {
+  #Cabecera{
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background-color: #5b7989;
+    border-radius:10px 10px 0px 0px;
+    }
+ }
+
 #Nombre_marca{
+  flex: auto;
   color:white;
   font-size: 50px;
   text-shadow: 2px 2px 2px #02010a;
@@ -23,6 +61,7 @@ background-color: #02010a;
 }
 
 #Menu_nav{
+  flex: auto;
   text-decoration:none;
   color:white;
   margin: 20px;
@@ -34,39 +73,64 @@ background-color: #02010a;
   font-size: 20px;
 }
 
-}
 a:link{
   text-decoration: none;
 }
+
 .Imagenes{
   background-color: #82c3a6;
-}
-
-#Imagen_central{
   display:flex;
   display: -webkit-flex;
   display: -ms-flexbox;
   justify-content: center;
   margin:auto;
-  padding: 10px;
-  max-width: 80%;
-  max-height: 80%;
 }
 
-.Contenedor_galeria_menu{
-  display: flex;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  width: 100%;
-  min-height: 200px;
-  flex-direction:row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background-color: #d5c75f;
-  border:1px;
-  max-width: 100%;
-  max-height: 180%;
-  }
+#Imagen_central{
+  flex: auto;
+  padding: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: none;
+}
+
+
+@media only screen and (max-width: 900px) {
+  .Contenedor_galeria_menu{
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    width: 100%;
+    min-height: 200px;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #d5c75f;
+    border:1px;
+    max-width: 100%;
+    max-height: 180%;
+    align-items: center;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+  .Contenedor_galeria_menu{
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    width: 100%;
+    min-height: 200px;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #d5c75f;
+    border:1px;
+    max-width: 100%;
+    max-height: 180%;
+    align-items: center;
+    }
+}
+
 
 .Menu_galeria1{
  padding: 10px;
@@ -77,26 +141,36 @@ a:link{
 }
 
 #Paisaje{
+  flex: auto;
   max-width: 100%;
   max-height: 180%;
   box-shadow: 2px 2px 10px #82c3a6;
-  border: 2px;
+  border: 1px solid;
+}
+
+@-webkit-keyframes Animacion_paisaje{
+  from{
+    transform: rotate(10deg);
+  }
+  to{
+    height: "0";
+  }
+}
+
+#Paisaje:hover{
+  animation: Animacion_paisaje 2s;
 }
 
 #Retrato{
+  flex: auto;
   max-width: 100%;
   max-height: 180%;
   box-shadow: 2px 2px 10px #82c3a6;
-  border: 2px;
+  border: 1px solid;
 }
-.Pie_de_pagina{
-  font-family: "dancing script";
-  background-color: #C6d5c5;
-  border-radius:0px 0px 10px 10px;
-  display: flex;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  flex-direction: column;
+
+#Retrato:hover{
+  transform: translate(10em,0);
 }
 
 .Contenedor_galeria_paisaje{
@@ -110,6 +184,20 @@ a:link{
   justify-content: space-between;
   background-color: #d5c75f;
   border:10px;
+  }
+
+@media only screen and (max-width: 900px) {
+  .Contenedor_galeria_paisaje{
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #d5c75f;
+    align-items: center;
+    border:10px;
+    }
   }
 
 .Paisaje_galeria{
@@ -126,12 +214,20 @@ a:link{
   filter: blur(10px);
 }
 
-#Paisaje2 #Paisaje4 #Paisaje6{
-  -webkit-filter: greyscale;
-  -moz-filter: greyscale;
-  -o-filter: greyscale;
-  -ms-filter: greyscale;
-  filter: greyscale;  
+#Paisaje2, #Paisaje4, #Paisaje6{
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+#Paisaje3{
+  -webkit-filter: sepia(90%);
+  -moz-filter: sepia(90%);
+  -o-filter: sepia(90%);
+  -ms-filter: sepia(90%);
+  filter: sepia(90%);
 }
 
 .Contenedor_galeria_retrato{
@@ -139,7 +235,7 @@ a:link{
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   width: 100%;
-  min-height: 500px
+  min-height: 500px;
   flex-direction:row;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -147,8 +243,99 @@ a:link{
   border:10px;
   }
 
+@media only screen and (max-width: 900px) {
+  .Contenedor_galeria_retrato{
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #d5c75f;
+    align-items: center;
+    border:10px;
+    }
+ }
+
 .Retrato_galeria{
   width: 30%;
   height: 30%;
   margin: 20px;
+}
+
+#Retrato1{
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+}
+
+#Retrato2, #Retrato4, #Retrato6{
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+#Retrato3{
+  -webkit-filter: sepia(90%);
+  -moz-filter: sepia(90%);
+  -o-filter: sepia(90%);
+  -ms-filter: sepia(90%);
+  filter: sepia(90%);
+}
+
+.Pie_de_pagina{
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #C6d5c5;
+  border-radius:0px 0px 10px 10px;
+  align-items: center;
+  padding: 50px;
+}
+
+@media only screen and (max-width: 900px) {
+  .Pie_de_pagina{
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #C6d5c5;
+    border-radius:0px 0px 10px 10px;
+    align-items: center;
+   }
+}
+
+.Contacto{
+  flex: auto;
+  padding: 10px;
+  margin: 20px;
+}
+
+.Politicas{
+  flex: auto;
+  padding: 10px;
+  margin: 20px;
+}
+
+.Redes_sociales{
+  flex: auto;
+  padding: 10px;
+  margin: 20px;
+}
+
+.Derechos{
+  flex: auto;
+  padding: 10px;
+  margin: 20px;
+}
+
+.Icon{
+  box-shadow: none;
 }
